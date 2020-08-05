@@ -61,6 +61,7 @@ resource "aws_elasticsearch_domain" "es_vpc" {
   }
 
   advanced_options = var.advanced_options
+  advanced_security_options = var.advanced_security_options
 
   dynamic "log_publishing_options" {
     for_each = var.log_publishing_options
